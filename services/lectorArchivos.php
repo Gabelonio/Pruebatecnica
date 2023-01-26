@@ -16,7 +16,7 @@
     $archivoCargado = fopen($archivoObtenido, 'r');
 
     $isFormatoValido = true;
-    $usuariosObtenidos = [];
+    $registrosObtenidos = [];
 
     /* Recorre linea a linea el archivo para extraer cada registro y llenar un arreglo de objetos */
     while(!feof($archivoCargado)){
@@ -31,7 +31,7 @@
                   $filaDatos[3] < 1);
             
             /* Agrega el registro entrante organizando el objeto por atributos */     
-            array_push($usuariosObtenidos, [
+            array_push($registrosObtenidos, [
                 "email" => $filaDatos[0],
                 "nombre" => $filaDatos[1],
                 "apellido" => $filaDatos[2],
@@ -47,7 +47,7 @@
         header('location: ../index.php?isFormatoInvalido=true');
     }else{
         /* Agrega los datos obtenidos a una base de datos */
-        setRegistros($usuariosObtenidos);
+        setRegistros($registrosObtenidos);
         /* Redirecciona a la pagina de visualizacion de datos */
         header('location: ../pages/visualizacionResultados.php');
     }
