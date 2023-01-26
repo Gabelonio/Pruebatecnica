@@ -1,0 +1,21 @@
+.formulario{
+    margin-top: 4.0rem;
+    margin-bottom: 4.0rem;
+    width: 50%;
+}
+
+.contenedor-principal{
+    border-radius: 10px;
+    border-color:  #a8a4a4;
+}
+
+.titulo-cabezera-formulario{
+    border-radius: 10px 10px 0px 0px !important;
+    font-weight: bold;
+    background-color: #a8a4a4;
+    color:azure;
+}
+
+
+
+

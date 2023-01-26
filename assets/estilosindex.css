@@ -1,0 +1,20 @@
+.titulo-carga-formulario{
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 23px;
+    text-align: center;
+}
+
+.texto-error{
+    color:crimson;
+    font-weight: bold;
+}
+
+.boton-envio-formulario{
+    margin-top: 15px;
+    float: right;
+    background: rgb(246,246,246);
+    background: linear-gradient(180deg, rgba(246,246,246,1) 0%, rgba(131,131,131,1) 100%); 
+    color: black;
+    border-color: #a8a4a4;
+}
