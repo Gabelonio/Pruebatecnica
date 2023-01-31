@@ -8,7 +8,8 @@
             $nombre = $registro['nombre'];
             $apellido = $registro['apellido'];
             $codigo = $registro['codigo'];
-            $sql = "INSERT INTO registros (email, nombre, apellido, codigo) values ('$email', '$nombre', '$apellido', '$codigo')";
+            $codigoRevisor = $registro['codigoRevisor'];
+            $sql = "INSERT INTO registros (email, nombre, apellido, codigo, codigoRevisorFK) values ('$email', '$nombre', '$apellido', '$codigo', '$codigoRevisor')";
             $resultado = mysqli_query($con, $sql);
             if(!$resultado){
                 die(mysqli_error($con));
@@ -19,7 +20,7 @@
     /* Obtencion de los registros traidos de la base de datos por codigo*/
     function getRegistrosByCodigo($codigo){
         include 'conexion.php';
-        $sql = "SELECT * FROM registros WHERE codigo = '$codigo'";
+        $sql = "SELECT Reg.email as email, Reg.nombre as nombre, Reg.apellido as apellido, Rev.apellido as apellidoRevisor FROM registros Reg, revisores Rev WHERE codigo = '$codigo' AND Reg.codigoRevisorFK = Rev.id";
         $resultado = mysqli_query($con, $sql);
         if(!$resultado){
             die(mysqli_error($con));

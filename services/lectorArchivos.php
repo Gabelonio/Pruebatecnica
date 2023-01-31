@@ -26,7 +26,9 @@
             $isFormatoValido = 
                 $isFormatoValido && 
                 !(empty($filaDatos[0]) || 
-                  empty($filaDatos[3]) || 
+                  empty($filaDatos[2]) ||
+                  empty($filaDatos[3]) ||
+                  empty($filaDatos[4]) ||
                   $filaDatos[3] > 3 ||
                   $filaDatos[3] < 1);
             
@@ -35,7 +37,8 @@
                 "email" => $filaDatos[0],
                 "nombre" => $filaDatos[1],
                 "apellido" => $filaDatos[2],
-                "codigo" => $filaDatos[3]
+                "codigo" => $filaDatos[3],
+                "codigoRevisor" => $filaDatos[4]
             ]);
         }
     }

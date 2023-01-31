@@ -32,6 +32,7 @@
                             <th scope="col">Email</th>
                             <th scope="col">Nombre</th>
                             <th scope="col">Apellido</th>
+                            <th scope="col">Revisor</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -41,10 +42,12 @@
                             $email = $fila['email'];
                             $nombre = $fila['nombre'];
                             $apellido = $fila['apellido'];
+                            $apellidoRevisor = $fila['apellidoRevisor'];
                             echo '<tr>
                                     <td>' . $email . '</td>
                                     <td>' . $nombre . '</td>
                                     <td>' . $apellido . '</td>
+                                    <td>' . $apellidoRevisor . '</td>
                                   </tr>';
                         }/* Obtencion de usuarios activos */
                         ?>
@@ -57,6 +60,7 @@
                             <th scope="col">Email</th>
                             <th scope="col">Nombre</th>
                             <th scope="col">Apellido</th>
+                            <th scope="col">Revisor</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -66,10 +70,12 @@
                             $email = $fila['email'];
                             $nombre = $fila['nombre'];
                             $apellido = $fila['apellido'];
+                            $apellidoRevisor = $fila['apellidoRevisor'];
                             echo '<tr>
                                     <td>' . $email . '</td>
                                     <td>' . $nombre . '</td>
                                     <td>' . $apellido . '</td>
+                                    <td>' . $apellidoRevisor . '</td>
                                   </tr>';
                         }/* Obtencion de usuarios inactivos */
                         ?>
@@ -82,6 +88,7 @@
                             <th scope="col">Email</th>
                             <th scope="col">Nombre</th>
                             <th scope="col">Apellido</th>
+                            <th scope="col">Revisor</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -91,10 +98,12 @@
                             $email = $fila['email'];
                             $nombre = $fila['nombre'];
                             $apellido = $fila['apellido'];
+                            $apellidoRevisor = $fila['apellidoRevisor'];
                             echo '<tr>
                                     <td>' . $email . '</td>
                                     <td>' . $nombre . '</td>
                                     <td>' . $apellido . '</td>
+                                    <td>' . $apellidoRevisor . '</td>
                                   </tr>';
                         }/* Obtencion de usuarios en espera */
                         ?>
